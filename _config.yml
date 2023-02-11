@@ -16,7 +16,7 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {title: "YT", url: "https://www.google.com"}
+  - {title: "YT", url: "https://www.youtube.com/channel/UCasNVT5uSNgtYm2MVWf0zKg"}
   - {title: "Blog", file: "blog.md"}
   
 
