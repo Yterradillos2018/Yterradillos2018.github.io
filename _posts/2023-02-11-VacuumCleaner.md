@@ -52,7 +52,7 @@ espiral). Seguido a esto tendremos un if en el cual si se cumple alguna de las c
  
  [Aqui](https://www.youtube.com/channel/UCasNVT5uSNgtYm2MVWf0zKg) dejo un enlace al video de la ejecución de todo lo explicado anteriormente.
  
- {% include embed.html url="https://youtu.be/teLzl2Px4YA" %}
+ {% include embed.html url="https://www.youtube.com/watch?v=teLzl2Px4YA" %}
 
 
 
