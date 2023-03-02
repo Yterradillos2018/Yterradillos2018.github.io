@@ -48,3 +48,16 @@ se establece en 3.
 Finalmente, se establecen las velocidades lineal y angular utilizando las funciones HAL.setV(speed) y HAL.setW(U). La vista del coche se muestra una vez
 más utilizando la función GUI.showImage(imagen).
 
+[Aqui](https://www.youtube.com/@yerayterradilloslorenzo) dejo un enlace al canal.
+ 
+Pista 1:
+{% include embed.html url="https://www.youtube.com/watch?v=uXcTnbnyeFA" %}
+Pista 2:
+{% include embed.html url="https://www.youtube.com/watch?v=S-UqmztNTuM" %}
+Pista 3:
+{% include embed.html url="https://www.youtube.com/watch?v=rkP113PCRUM" %}
+Pista 4:
+{% include embed.html url="https://www.youtube.com/watch?v=pozXvn_DivA" %}
+Pista 1 vuelta rápida:
+{% include embed.html url="https://www.youtube.com/watch?v=TrBCq0U1yIQ" %}
+
