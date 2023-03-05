@@ -48,6 +48,11 @@ se establece en 3.
 Finalmente, se establecen las velocidades lineal y angular utilizando las funciones HAL.setV(speed) y HAL.setW(U). La vista del coche se muestra una vez
 más utilizando la función GUI.showImage(imagen).
 
+En la entrega he adjuntado dos códigos uno general el cual termina todas las pistas sin problema (followLine.py) y otro el cual está adaptado para hacer 
+el circuiito 1 lo más rápido posible el cual será (fastFollowLine.py). Lo único que difrencia a estos dos códigos es que he ajustado algunos de los 
+parámetros para que acelere más rapido o que frene con las curvas más apuradas, pero no he hecho cambios muy considerados en mi código para la 
+realización de las 2 versiones.
+
 [Aqui](https://www.youtube.com/@yerayterradilloslorenzo) dejo un enlace al canal.
  
 Pista 1:
