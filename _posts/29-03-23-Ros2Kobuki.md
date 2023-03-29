@@ -21,21 +21,7 @@ contrario al lado en que se ha detectado el obstáculo.
 
 Para ello hemos implementado un diagrama de estados el cual dejo en la siguiente imagen:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![WhatsApp Image 2023-03-29 at 18 22 51](https://user-images.githubusercontent.com/98461427/228605218-e632fc0f-b676-4660-bda4-a5480d8103b4.jpeg)
 
 Como se puede ver vamos a tener un total de 5 estados que van a ser:
 
