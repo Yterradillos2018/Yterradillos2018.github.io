@@ -7,7 +7,7 @@ categories:
   -website
 ---
 
-## Explicación del Codigo 
+## Explicación del Codigoooooooooooooo
 Hola a todos, en este blog de robótica vamos a analizar un código que nos permitirá entender cómo funciona un controlador PD en un robot.
 
 El código comienza con la importación de las bibliotecas necesarias, como GUI, HAL, numpy y cv2. GUI es la biblioteca que permite la visualización de
