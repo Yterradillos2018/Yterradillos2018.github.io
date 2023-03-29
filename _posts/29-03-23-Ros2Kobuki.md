@@ -1,1 +1,120 @@
+---
+title:  "Ros2 Kobuki Bumpgo"
+mathjax: true
+layout: post
+categories:
+  -github
+  -website
+---
 
+## Explicación de la práctica:
+Hola, este es Readme del prime proyecto de robótica llamado bumpandgo. Para este proyecto hemos 
+tenido que implementar el código necesario para hacer que un robot kobuki realice las siguientes
+tareas:
+
+1. Avance si no hay un obstáculo delante a menos de un metro y medio.
+
+2. Gire si detecta un obstáculo, retrocede medio metro (aproximadamente), y gira en sentido
+contrario al lado en que se ha detectado el obstáculo.
+
+3. Vuelva a avanzar
+
+Para ello hemos implementado un diagrama de estados el cual dejo en la siguiente imagen:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Como se puede ver vamos a tener un total de 5 estados que van a ser:
+
+1. STOP
+
+2. BACK
+
+3. FORWARD
+
+4. TURN_LEFT
+
+5. TURN_RIGHT
+
+Las flechas del dibujo nos van a marcar de que estado a que estado podemos transitar y por lógica 
+también nos va a indicar las funciones que nos vamos a tener que crear:
+
+1. go_state(int new_state): Esta función cambia el estado actual del programa a un nuevo estado
+especificado en la entrada de la función.
+
+2. check_forward_2_back(): Esta función verifica si el movimiento del robot está avanzando hacia
+adelante y cambia la dirección a hacia atrás si tenemos un objeto a menos de un metro en frente.
+
+3. check_forward_2_stop(): Esta función verifica si el movimiento del robot está avanzando hacia
+adelante y cambia la dirección a detenerse si no recibimos informacion del laser durante un 
+tiempo.
+
+4. check_stop_2_forward(): Esta función verifica si el robot está detenido y cambia la dirección a
+avanzar si es así.
+
+5. check_forward_2_turn_right(): Esta función verifica si el movimiento del robot está avanzando
+hacia adelante y cambia la dirección a girar a la derecha si encontramos un objeto a menos de un
+metro pero por la izquierda del robot.
+
+6. check_forward_2_turn_left(): Esta función verifica si el movimiento del robot está avanzando
+hacia adelante y cambia la dirección a girar a la izquierda si encontramos un objeto a menos de un
+metro pero por la derecha del robot.
+
+7. check_back_2_turn_right(): Esta función verifica si el movimiento del robot está retrocediendo
+y cambia la dirección a girar a la derecha si ya han pasado los dos segundos de retroceso.
+
+8. check_turn_left_2_forward(): Esta función verifica si el robot está girando hacia la izquierda
+y cambia la dirección a avanzar si ya han pasado los dos segundos de giro.
+
+9. check_turn_right_2_forward(): Esta función verifica si el robot está girando hacia la derecha y
+cambia la dirección a avanzar si ya han pasado los dos segundos de giro.
+
+Ademas tendremos otras dos funciones que las voy a explicar a parte porque son mas laboriosas.
+
+1. control_cycle(): Esta función es parte del bucle principal del programa que controla el robot. Se ejecuta repetidamente para asegurarse de que el robot esté funcionando correctamente y siguiendo las instrucciones adecuadas. En cada ciclo de control, se actualizan los datos del sensor, se procesan las instrucciones de movimiento y se envían comandos al robot. Esta función es esencial para mantener el funcionamiento correcto del robot y garantizar su seguridad.
+
+2. scan_callback(): Esta función se activa cada vez que el robot recibe datos de su sensor de escaneo. El sensor de escaneo utiliza láseres para mapear el entorno del robot y detectar objetos cercanos. La función "scan_callback" procesa los datos de escaneo y toma decisiones en consecuencia. Por ejemplo, si el sensor detecta un obstáculo, la función "scan_callback" puede enviar una señal para detener el movimiento del robot y evitar una colisión. Esta función es esencial para garantizar la seguridad del robot y evitar daños a objetos cercanos.
+
+
+Además tambien voy a dejar por aqui los comandos necesarios para compilar y ejecutar nuestro 
+proyecto.
+
+Lo primero será compilarlo, para ello usamos el siguiente comando:
+
+- colcon build --symlink-install --packages-select fsm_bumpgo_cpp
+
+Tras haberlo compilado tendremos que iniciar nuestro robot kobuki:
+
+- ros2 launch ir_robots kobuki.launch.py
+
+Por último una vez ya conectado nuestro ordenador al kobuki necesitaremos correr el programa para
+ello:
+
+- ros2 launch fsm_bumpgo_cpp bump_and_go.launch.py
+
+
+[Aqui](https://www.youtube.com/@yerayterradilloslorenzo) dejo un enlace al canal.
+ 
+Pista 1:
+{% include embed.html url="https://www.youtube.com/embed/uXcTnbnyeFA" %}
+Pista 2:
+{% include embed.html url="https://www.youtube.com/embed/S-UqmztNTuM" %}
+Pista 3:
+{% include embed.html url="https://www.youtube.com/embed/rkP113PCRUM" %}
+Pista 4:
+{% include embed.html url="https://www.youtube.com/embed/pozXvn_DivA" %}
+Pista 1 vuelta rápida:
+{% include embed.html url="https://www.youtube.com/embed/TrBCq0U1yIQ" %}
